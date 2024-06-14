@@ -9,6 +9,8 @@ services:
       - "8000:8000"
     volumes:
       - ./react-app:/app
+    environment:
+      - NODE_ENV=development
     command: npm start
 
   nginx:

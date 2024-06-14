@@ -1,4 +1,4 @@
-FROM node:14 AS build
+FROM node:latest AS build
 WORKDIR /app
 RUN npm install
 COPY package.json package-lock.json ./
