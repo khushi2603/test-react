@@ -1,0 +1,21 @@
+name: Test Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  print_hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Hello World
+        run: echo "Hello, World!"
+
+  print_review_done:
+    env: stg
+    needs: print_hello_world
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Review Done
+        run: echo "Review done successfully!"
